@@ -1,4 +1,7 @@
 import {sqaureNumber} from "./map";
+import printArray from "./fruit";
+import {sliced} from "./slice";
+import { filter } from "./filter";
 
 console.log('Try npm run lint/fix!');
 
@@ -37,3 +40,17 @@ export function doSomeStuff(
 const numbers = [2,4,6,8];
 
 console.log(sqaureNumber(numbers));
+
+const stringArray: string[] = ['apple', 'sofa', 'fan', 'banana'];
+const filtered = filter(stringArray);
+filtered.forEach((filteredString: string) => {
+  console.log(filteredString);
+});
+
+const fruits = ['apple', 'banana', 'mango', 'grape'];
+printArray(fruits);
+
+const singleString = 'single';
+const slicedFruits = sliced(singleString, 1, 3);
+console.log(slicedFruits);
+
